@@ -1,4 +1,7 @@
 
+*customization: -color
+xterm*termName: xterm-256color
+
 ! Set font and size
 xterm*faceName: DejaVu Sans Mono Book
 xterm*faceSize: 11

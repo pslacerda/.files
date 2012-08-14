@@ -75,6 +75,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'ervandew/supertab'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'xoria256.vim'
 
 "
 " tomtom/tcomment_vim
