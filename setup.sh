@@ -1,3 +1,5 @@
-for file in `ls * | grep -v setup.sh`; do
-  ln -s $file $HOME/.$file
-done
+#!/bin/sh
+
+
+ls -1 | grep -v setup.sh | xargs -I {} -i sh -c 'rm -rf ~/.{}; cp -r {} ~/.{}'
+
