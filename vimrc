@@ -46,6 +46,7 @@ set backspace+=start
 "
 syntax enable
 set background=dark
+colorscheme xoria256
 
 set number        " show line numbers
 set cursorline    " highlight current line
@@ -78,7 +79,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'xoria256.vim'
 
 "
-" tomtom/tcomment_vim
+" Shortcuts
 "
 map <leader>cc :TComment<CR>
 
