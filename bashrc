@@ -15,7 +15,7 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\W\[\033[00m\] '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\W\[\033[01;32m\]$\[\033[00m\] '
 
 PATH=$PATH:$HOME/bin
 
