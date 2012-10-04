@@ -1,13 +1,34 @@
 "
+" Vundle Plugins
+"
+filetype off
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'gmarik/vim-markdown'
+Bundle 'timcharper/textile.vim'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'ervandew/supertab'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'vim-scripts/wombat256.vim'
+Bundle 'xoria256.vim'
+
+filetype plugin indent on " automatically detect file types
+
+
+"
 " General
 "
 set nocompatible        " be iMproved
 set history=256         " remember a lot
 set clipboard=+unnamed  " yanks go on clipboard
-set tags=./tags;$HOME   " walk directory tree upto $HOME looking for tags
+"set tags=./tags;$HOME   " walk directory tree upto $HOME looking for tags
 set mouse=a
 
-set nobackup        " disable backup
+set nobackup        " disable backup files
 set nowritebackup   " 
 set noswapfile      " 
 
@@ -30,7 +51,7 @@ set completeopt=menuone,longest,preview
 set nowrap      " don't wrap lines by default
 set textwidth=0 " 
 
-set tabstop=4       " set identation to two characters
+set tabstop=4       " set identation to four characters
 set softtabstop=4   " 
 set shiftwidth=4    " 
 set expandtab       " replace tabs with `tabstop` spaces
@@ -61,26 +82,12 @@ set wildmode+=list    " then list alternatives
 
 set noerrorbells  " no noise
 
-"
-" Plugins
-"
-filetype off
-set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'gmarik/vim-markdown'
-Bundle 'timcharper/textile.vim'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'ervandew/supertab'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'xoria256.vim'
 
 "
 " Shortcuts
 "
-map <leader>cc :TComment<CR>
+map <leader>cc :TComment<CR> 
+imap jk <Esc>
 
-filetype plugin indent on " automatically detect file types
+
+
