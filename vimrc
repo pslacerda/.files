@@ -87,7 +87,7 @@ set noerrorbells  " no noise
 " Shortcuts
 "
 map <leader>cc :TComment<CR> 
-imap jk <Esc>
+imap jj <Esc>
 
 
 
