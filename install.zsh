@@ -1,3 +1,4 @@
+#!/bin/zsh
 setopt extended_glob
 
-for f in ^$0*; echo rm -r ~/.$f && echo ln -s $PWD/$f ~/.$f
+for f in ^$0*; rm -r ~/.$f && ln -s $PWD/$f ~/.$f
