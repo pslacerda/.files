@@ -1,1 +1,1 @@
-zsh `curl "https://raw.github.com/kanvuanza/dotfiles/master/install.zsh"`
+git clone 'http://github.com/kanvuanza/dotfiles' dotfiles && cd dotfiles && ./install.zsh
