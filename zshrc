@@ -7,7 +7,8 @@ autoload compinit && compinit
 ##
 # Configura o histórico de comandos
 # 
-HISTFILE=~/history
+HISTFILE=~/.history
+
 HISTSIZE=5000
 SAVEHIST=5000
 
@@ -25,7 +26,7 @@ bindkey "^[[B" history-beginning-search-forward
 #
 setopt AUTO_CD
 setopt AUTO_REMOVE_SLASH
-zstyle ':completion:*' menu select # autocompletar com esteróides
+zstyle ':completion:*:commands' menu select rehash 1# autocompletar com esteróides
 
 ##
 # Define funções úteis para as teclas HOME e END
@@ -45,7 +46,6 @@ alias   ls='ls --color=auto'
 alias   mv='mv -i'
 alias grep='grep --color=auto'
 alias less='less -r'
-alias   ..='cd ..'
 alias diff='colordiff'
 
 ##

@@ -15,6 +15,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'vim-scripts/wombat256.vim'
 Bundle 'xoria256.vim'
+Bundle 'jcf/vim-latex'
+Bundle 'Townk/vim-autoclose'
 
 filetype plugin indent on " automatically detect file types
 
@@ -24,8 +26,6 @@ filetype plugin indent on " automatically detect file types
 "
 set nocompatible        " be iMproved
 set history=256         " remember a lot
-set clipboard=+unnamed  " yanks go on clipboard
-"set tags=./tags;$HOME   " walk directory tree upto $HOME looking for tags
 set mouse=a
 
 set nobackup        " disable backup files
@@ -86,7 +86,7 @@ set noerrorbells  " no noise
 "
 " Shortcuts
 "
-map <leader>cc :TComment<CR> 
+map <C>c :TComent<CR>
 imap jj <Esc>
 
 
