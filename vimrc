@@ -7,15 +7,10 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'gmarik/vim-markdown'
-Bundle 'timcharper/textile.vim'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
 Bundle 'ervandew/supertab'
-Bundle 'pangloss/vim-javascript'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'vim-scripts/wombat256.vim'
 Bundle 'xoria256.vim'
-Bundle 'jcf/vim-latex'
 Bundle 'Townk/vim-autoclose'
 
 filetype plugin indent on " automatically detect file types

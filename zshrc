@@ -5,11 +5,10 @@ antigen-lib
 antigen-bundles <<EOF
     command-not-found
     extract
-    git
-
+    
+    zsh-users/zsh-history-substring-search
     zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-completions
-    zsh-users/zsh-history-substring-search
 EOF
 
 antigen-apply
