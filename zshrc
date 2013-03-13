@@ -1,4 +1,3 @@
-
 source ~/.antigen/antigen.zsh
 antigen-lib
 
@@ -54,13 +53,13 @@ PROMPT="%B%{$fg[magenta]%}%c%{$fg[green]%}%#%b "
 # Aliases
 # 
 alias   ls='ls --color=auto'
-alias   mv='mv -i'
+alias   mv='mv --interactive'
+alias   rm='rm --interactive=once'
 alias grep='grep --color=auto'
-alias less='less -r'
 alias diff='colordiff'
 
 alias -g C='| wc -l'
-alias -g L='| less'
+alias -g L='| less -R'
 
 ##
 # Colore os manuais
