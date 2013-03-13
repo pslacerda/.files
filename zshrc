@@ -1,20 +1,28 @@
+
+
+
+source ~/.antigen/antigen.zsh
+antigen-bundle zsh-users/zsh-syntax-highlighting
+
 ##
 # Carrega coisas úteis
 #
-autoload colors && colors
-autoload compinit && compinit
+autoload -U colors && colors
+autoload -U compinit && compinit
+
+
 
 ##
 # Configura o histórico de comandos
 # 
 HISTFILE=~/.history
 
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=20000
+SAVEHIST=20000
 
 setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
 setopt APPEND_HISTORY
+
 
 # pesquisa o histórico com as setas direcionais
 bindkey "^[[A" history-beginning-search-backward
@@ -26,7 +34,12 @@ bindkey "^[[B" history-beginning-search-forward
 #
 setopt AUTO_CD
 setopt AUTO_REMOVE_SLASH
-zstyle ':completion:*:commands' menu select rehash 1# autocompletar com esteróides
+setopt INTERACTIVE_COMMENTS
+setopt ALWAYS_TO_END
+setopt NO_CLOBBER
+setopt EXTENDED_GLOB
+
+zstyle ':completion:*:commands' menu select rehash 1
 
 ##
 # Define funções úteis para as teclas HOME e END
@@ -47,6 +60,9 @@ alias   mv='mv -i'
 alias grep='grep --color=auto'
 alias less='less -r'
 alias diff='colordiff'
+
+alias -g C='| wc -l'
+alias -g L='| less'
 
 ##
 # Make 
