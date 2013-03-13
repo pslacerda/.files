@@ -1,28 +1,29 @@
 
-
-
 source ~/.antigen/antigen.zsh
-antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen-lib
 
-##
-# Carrega coisas úteis
-#
-autoload -U colors && colors
-autoload -U compinit && compinit
+antigen-bundles <<EOF
+    command-not-found
+    extract
+    git
 
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-completions
+    zsh-users/zsh-history-substring-search
+EOF
+
+antigen-apply
 
 
 ##
 # Configura o histórico de comandos
-# 
-HISTFILE=~/.history
-
-HISTSIZE=20000
-SAVEHIST=20000
-
+#
 setopt HIST_IGNORE_DUPS
 setopt APPEND_HISTORY
 
+HISTFILE=~/.history
+HISTSIZE=20000
+SAVEHIST=20000
 
 # pesquisa o histórico com as setas direcionais
 bindkey "^[[A" history-beginning-search-backward
@@ -39,18 +40,15 @@ setopt ALWAYS_TO_END
 setopt NO_CLOBBER
 setopt EXTENDED_GLOB
 
-zstyle ':completion:*:commands' menu select rehash 1
+#zstyle ':completion:*:commands' menu select rehash 1
 
-##
-# Define funções úteis para as teclas HOME e END
-#
+# torna as teclas HOME e END úteis
 bindkey "\e[H" beginning-of-line
 bindkey "\e[F" end-of-line
 
-##
-# Um prompt empiriquitado
-#
+# prompt empiriquitado
 PROMPT="%B%{$fg[magenta]%}%c%{$fg[green]%}%#%b "
+
 
 ##
 # Aliases
@@ -65,7 +63,7 @@ alias -g C='| wc -l'
 alias -g L='| less'
 
 ##
-# Make 
+# Colore os manuais
 #
 man() {
     env \
