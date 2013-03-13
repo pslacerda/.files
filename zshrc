@@ -1,3 +1,4 @@
+cd ~
 source ~/.antigen/antigen.zsh
 antigen-lib
 
@@ -38,6 +39,7 @@ setopt INTERACTIVE_COMMENTS
 setopt ALWAYS_TO_END
 setopt NO_CLOBBER
 setopt EXTENDED_GLOB
+export DISABLE_AUTO_TITLE=true
 
 #zstyle ':completion:*:commands' menu select rehash 1
 

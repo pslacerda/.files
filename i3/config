@@ -5,7 +5,7 @@ set $mod Mod4
 # Atalhos
 # ~~~~~~~
 
-bindsym $mod+Return exec uxterm
+bindsym $mod+Return exec uxterm -e tmux attach
 bindsym $mod+d      exec dmenu_run
 
 # bater screenshot (print screen)
