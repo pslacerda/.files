@@ -12,6 +12,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'vim-scripts/wombat256.vim'
 Bundle 'xoria256.vim'
 Bundle 'Townk/vim-autoclose'
+Bundle 'HubLot/vim-gromacs'
 
 filetype plugin indent on " automatically detect file types
 

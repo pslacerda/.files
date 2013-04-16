@@ -1,9 +1,7 @@
-cd ~
 source ~/.antigen/antigen.zsh
 antigen-lib
 
 antigen-bundles <<EOF
-    command-not-found
     extract
     
     zsh-users/zsh-history-substring-search
@@ -28,6 +26,11 @@ SAVEHIST=20000
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
+##
+# Entrada do teclado
+#
+bindkey -v                          # vi
+bindkey -M viins 'jj' vi-cmd-mode   # jj entra no modo normal
 
 ##
 # Miscelânea
@@ -42,12 +45,18 @@ export DISABLE_AUTO_TITLE=true
 
 #zstyle ':completion:*:commands' menu select rehash 1
 
-# torna as teclas HOME e END úteis
-bindkey "\e[H" beginning-of-line
-bindkey "\e[F" end-of-line
-
 # prompt empiriquitado
-PROMPT="%B%{$fg[magenta]%}%c%{$fg[green]%}%#%b "
+PROMPT=" %B%{$fg[magenta]%}%c%{$fg[green]%}%#%b "
+
+function zle-line-init zle-keymap-select {
+    VIMODE="${${KEYMAP/vicmd/ }/(main|viins)/I}"
+    PROMPT="$VIMODE%B%{$fg[magenta]%}%c%{$fg[green]%}%#%b "
+
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 
 
 ##
