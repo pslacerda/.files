@@ -40,16 +40,16 @@ bindsym $mod+Shift+space focus mode_toggle
 bindsym $mod+Shift+Q kill
 
 # muda foco
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l right
 
 # move janelas
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # particiona na horizontal e vertical
 bindsym $mod+h split -
@@ -89,7 +89,6 @@ bindsym $mod+Shift+diaeresis move container to workspace 6
 bindsym $mod+Shift+ampersand move container to workspace 7
 bindsym $mod+Shift+asterisk move container to workspace 8
 bindsym $mod+Shift+parenleft move container to workspace 9
-bindsym $mod+Shift+parenright move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -99,10 +98,10 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
 # Redimensionamento de janelas
-bindsym $mod+Control+Left  resize shrink width 
-bindsym $mod+Control+Right resize grow width
-bindsym $mod+Control+Up    resize grow height
-bindsym $mod+Control+Down  resize shrink height
+bindsym $mod+Control+h resize shrink width 
+bindsym $mod+Control+l resize grow width
+bindsym $mod+Control+k resize grow height
+bindsym $mod+Control+j resize shrink height
 
 # Start i3bar to display a workspace bar (plus the system information i4status
 # finds out, if available)
