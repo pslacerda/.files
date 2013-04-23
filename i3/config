@@ -52,8 +52,8 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # particiona na horizontal e vertical
-bindsym $mod+h split -
-bindsym $mod+v split =
+bindsym $mod+Minus split -
+bindsym $mod+Equals split =
 
 # fullscreen
 bindsym $mod+f fullscreen
