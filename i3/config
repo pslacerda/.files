@@ -111,3 +111,5 @@ bar {
         workspace_buttons   yes
         tray_output         primary        
 }
+
+# vim:filetype=i3
