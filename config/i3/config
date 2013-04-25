@@ -1,115 +1,101 @@
 
-set $mod Mod4
+#
+# Geral
+#
+    set $mod Mod4
+    
+    bindsym $mod+Shift+R restart
+    bindsym $mod+Shift+E exit
 
 #
-# Atalhos
-# ~~~~~~~
+# Lançadores
+#
+    bindsym $mod+Return exec uxterm -e tmux attach
+    bindsym $mod+d      exec dmenu_run
 
-bindsym $mod+Return exec uxterm -e tmux attach
-bindsym $mod+d      exec dmenu_run
+    # bater screenshot (print screen)
+    bindcode 107 exec --no-startup-id import /tmp/screenshot.png
 
-# bater screenshot (print screen)
-bindcode 107 exec --no-startup-id import /tmp/screenshot.png
-
-# ajustar volume (keypad + - *)
-bindcode $mod+86 exec amixer --quiet set Master 1+
-bindcode $mod+82 exec amixer --quiet set Master 1-
-bindcode $mod+63 exec amixer --quiet set Master toggle
-
+    # ajustar volume (keypad + - *)
+    bindcode $mod+86 exec amixer --quiet set Master 1+
+    bindcode $mod+82 exec amixer --quiet set Master 1-
+    bindcode $mod+63 exec amixer --quiet set Master toggle
 
 #
 # Janelas flutuantes
-# ~~~~~~~~~~~~~~~~~~
+#
+    # Mouse+$mod arrasta janelas flutuantes
+    floating_modifier $mod
 
-# Mouse+$mod arrasta uma janela
-floating_modifier $mod
+    # alterna entre tiling e floating
+    bindsym $mod+space floating toggle
 
-# alterna entre tiling e floating
-bindsym $mod+space floating toggle
-
-# muda o foco entre janelas flutuantes
-bindsym $mod+Shift+space focus mode_toggle
-
-
+    # muda o foco entre janelas flutuantes
+    bindsym $mod+Shift+space focus mode_toggle
 
 #
-# Manipulação de janelas
-# ~~~~~~~~~~~~~~~~~~~~~~
+# Janelas empilhadas
+#
+    # miscelânea
+    bindsym $mod+Shift+Q kill
+    bindsym $mod+f       fullscreen
+  
+    # muda foco
+    bindsym $mod+h focus left
+    bindsym $mod+j focus down
+    bindsym $mod+k focus up
+    bindsym $mod+l focus right
 
-# assassina janela em foco
-bindsym $mod+Shift+Q kill
+    # movimenta janelas
+    bindsym $mod+Shift+h move left
+    bindsym $mod+Shift+j move down
+    bindsym $mod+Shift+k move up
+    bindsym $mod+Shift+l move right
 
-# muda foco
-bindsym $mod+h left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l right
+    # redimensiona
+    bindsym $mod+Control+h resize shrink width 
+    bindsym $mod+Control+l resize grow width
+    bindsym $mod+Control+k resize grow height
+    bindsym $mod+Control+j resize shrink height
 
-# move janelas
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+#
+# Containers
+#
+    # particiona container
+    bindsym $mod+Minus  split horizontal
+    bindsym $mod+Equals split vertical
 
-# particiona na horizontal e vertical
-bindsym $mod+Minus split -
-bindsym $mod+Equals split =
+    # alterna layout
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout default
+    bindsym $mod+x layout toggle all
 
-# fullscreen
-bindsym $mod+f fullscreen
+    # foca container pai
+    bindsym $mod+a focus parent
 
-# muda o layout do container
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout default
-bindsym $mod+x layout toggle all
+#
+# Áreas de trabalho
+#
+    # alterna para área de trabalho
+    bindsym $mod+1 workspace 1
+    bindsym $mod+2 workspace 2
+    bindsym $mod+3 workspace 3
+    bindsym $mod+4 workspace 4
 
+    # move container em foco para área de trabalho
+    bindsym $mod+Shift+exclam     move container to workspace 1
+    bindsym $mod+Shift+at         move container to workspace 2
+    bindsym $mod+Shift+numbersign move container to workspace 3
+    bindsym $mod+Shift+dollar     move container to workspace 4
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-
-# move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1
-bindsym $mod+Shift+at move container to workspace 2
-bindsym $mod+Shift+numbersign move container to workspace 3
-bindsym $mod+Shift+dollar move container to workspace 4
-bindsym $mod+Shift+percent move container to workspace 5
-bindsym $mod+Shift+diaeresis move container to workspace 6
-bindsym $mod+Shift+ampersand move container to workspace 7
-bindsym $mod+Shift+asterisk move container to workspace 8
-bindsym $mod+Shift+parenleft move container to workspace 9
-
-# reload the configuration file
-bindsym $mod+Shift+C reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+R restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
-
-# Redimensionamento de janelas
-bindsym $mod+Control+h resize shrink width 
-bindsym $mod+Control+l resize grow width
-bindsym $mod+Control+k resize grow height
-bindsym $mod+Control+j resize shrink height
 
 # Start i3bar to display a workspace bar (plus the system information i4status
 # finds out, if available)
+
 bar {
         status_command      i3status
         position            top
-        workspace_buttons   yes
-        tray_output         primary        
 }
 
 # vim:filetype=i3
