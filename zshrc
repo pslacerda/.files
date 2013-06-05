@@ -1,6 +1,5 @@
 source ~/.antigen/antigen.zsh
-antigen-lib
-
+antigen-use oh-my-zsh
 antigen-bundles <<EOF
     extract
     
