@@ -15,8 +15,6 @@
 #     ln -s $PWD/$f ~/.$f
 # done
 # 
-# vim -c BundleInstall -c q -c q
-# zsh ~/.zshrc
 
 # git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 # 
@@ -41,6 +39,9 @@ done
 # link zprezto
 rm -rf "$HOME/.zprezto"
 ln -s "$PWD/prezto" "$HOME/.zprezto"
+
+vim -c BundleInstall -c q -c q
+zsh ~/.zshrc
 
 # change default shell to ZSH
 curr_shell=$(basename $(getent passwd $LOGNAME | cut -d: -f7))
