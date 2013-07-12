@@ -6,7 +6,7 @@ git submodule update --init --recursive
 # link config files to $HOME
 setopt EXTENDED_GLOB
 for rcfile in "$PWD/"^(install.zsh|prezto); do
-    rm -f "$HOME/.${rcfile:t}"
+    rm -rf "$HOME/.${rcfile:t}"
     ln -s "$rcfile" "$HOME/.${rcfile:t}"
 done
 
