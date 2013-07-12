@@ -17,7 +17,7 @@ fi
 
 typeset -gU cdpath fpath mailpath path
 
-Set the the list of directories that cd searches.
+#Set the the list of directories that cd searches.
 cdpath=(
   $cdpath
 )
