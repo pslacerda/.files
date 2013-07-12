@@ -40,7 +40,7 @@ done
 rm -rf "$HOME/.zprezto"
 ln -s "$PWD/prezto" "$HOME/.zprezto"
 
-vim -c BundleInstall -c q -c q
+printf "\n\n" | vim -c BundleInstall -c q -c q
 zsh ~/.zshrc
 
 # change default shell to ZSH
