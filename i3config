@@ -13,9 +13,6 @@
     bindsym $mod+Return exec uxterm -e tmux attach
     bindsym $mod+d      exec dmenu_run
 
-    # bater screenshot (print screen)
-    bindcode 107 exec --no-startup-id import /tmp/screenshot.png
-
     # ajustar volume (keypad + - *)
     bindcode $mod+86 exec amixer --quiet set Master 1+
     bindcode $mod+82 exec amixer --quiet set Master 1-
@@ -62,8 +59,8 @@
 # Containers
 #
     # particiona container
-    bindsym $mod+Minus  split horizontal
-    bindsym $mod+Equals split vertical
+    #bindsym $mod+Minus  split horizontal
+    #bindsym $mod+Equals split vertical
 
     # alterna layout
     bindsym $mod+s layout stacking
@@ -94,8 +91,6 @@
 # finds out, if available)
 
 bar {
-        status_command      i3status
+        status_command      i3status -c ~/.i3status
         position            top
 }
-
-# vim:filetype=i3
