@@ -10,7 +10,10 @@
     " sintaxes
     Bundle 'HubLot/vim-gromacs'
     Bundle 'PotatoesMaster/i3-vim-syntax'
-    Bundle 'tpope/vim-markdown' 
+    Bundle 'tpope/vim-markdown'
+
+    " python
+    Bundle 'davidhalter/jedi-vim'
 
     " visual
     Bundle 'vim-scripts/wombat256.vim'
@@ -19,7 +22,7 @@
     Bundle 'tomtom/tcomment_vim'
     Bundle 'scrooloose/nerdtree'
     Bundle 'fholgado/minibufexpl.vim'
-    Bundle 'kien/ctrlp.vim'
+    " Bundle 'kien/ctrlp.vim'
 
 "
 " Geral
@@ -59,8 +62,8 @@
 "
 " Navegação
 "
-    " ctrlp
-    let g:ctrlp_working_path_mode = 'ra' 
+    " " ctrlp
+    " let g:ctrlp_working_path_mode = 'ra' 
     
     " NERDTree
     map <F2> :NERDTreeToggle<CR>
