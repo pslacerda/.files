@@ -38,6 +38,8 @@ zstyle ':prezto:module:editor' keymap 'vi'
 # auto convert .... to ../..
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
+# disable annoying automatic window renaming on tmux
+zstyle ':prezto:module:terminal' auto-title 'no'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 zstyle ':prezto:module:git:status:ignore' submodules 'all'
