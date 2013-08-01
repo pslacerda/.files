@@ -12,8 +12,8 @@ zstyle ':prezto:*:*' color 'yes'
 # Set prompt theme.
 zstyle ':prezto:module:prompt' theme 'sorin'
 
-# Auto set the tab and window titles.
-zstyle ':prezto:module:terminal' auto-title 'yes'
+# disable automatic window titles on tmux.
+zstyle ':prezto:module:terminal' auto-title 'no'
 
 # Set the Prezto modules to load.
 # The order matters.
@@ -27,6 +27,7 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'archive' \
+  'git' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt' 
