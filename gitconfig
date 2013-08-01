@@ -3,3 +3,7 @@
 	email = pslacerda@gmail.com
 [color]
 	ui = auto
+[advice]
+	statusHints = true
+[core]
+	whitespace = space-before-tab,trailing-space
