@@ -8,12 +8,18 @@
     Bundle 'gmarik/vundle'
 
     " sintaxes
+    Bundle 'tpope/vim-markdown'
     Bundle 'HubLot/vim-gromacs'
     Bundle 'PotatoesMaster/i3-vim-syntax'
-    Bundle 'tpope/vim-markdown'
 
     " python
     Bundle 'davidhalter/jedi-vim'
+
+    " C/C++
+    Bundle 'Rip-Rip/clang_complete'
+
+    " Octave
+    Bundle 'octave.vim'
 
     " visual
     Bundle 'vim-scripts/wombat256.vim'
@@ -22,6 +28,7 @@
     Bundle 'tomtom/tcomment_vim'
     Bundle 'scrooloose/nerdtree'
     Bundle 'fholgado/minibufexpl.vim'
+    Bundle 'ervandew/supertab'
     " Bundle 'kien/ctrlp.vim'
 
 "
@@ -93,6 +100,19 @@
     set statusline+=%=%1*%y%*%*\         " tipo de arquivo
     set statusline+=%10((%l,%c)%)\       " linhas e colunas
     set statusline+=%P                   " porcentagem do arquivo
+
+"
+" Autocompletar
+"
+    set completeopt=menu,menuone,longest  " usar menu etc
+    set pumheight=15                      " tamanho máximo do menu
+    
+    " Supertab - autocompletar consciente do contexto
+    let g:SuperTabDefaultCompletionType = "context"
+    
+    " clang_completion
+    let g:clang_complete_auto=0   " desabilita popup, usa <Tab> para autocompletar
+    let g:clang_complete_copen=1  " mostra erros do clang na janela de 'quickfix'
 
 "
 " Atalhos
