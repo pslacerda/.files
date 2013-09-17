@@ -91,6 +91,6 @@
 # finds out, if available)
 
 bar {
-        status_command      i3status -c ~/.i3status
+        status_command      i3status -c ~/.i3status.conf
         position            top
 }
