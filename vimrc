@@ -1,54 +1,54 @@
-"
-" Plugins Vundle
-"
-    " prólogo
-    filetype off
-    set runtimepath+=~/.vim/bundle/vundle/
-    call vundle#rc()
-    Bundle 'gmarik/vundle'
+    "
+    " Plugins Vundle
+    "
+        " prólogo
+        filetype off
+        set runtimepath+=~/.vim/bundle/vundle/
+        call vundle#rc()
+        Bundle 'gmarik/vundle'
 
-    " sintaxes
-    Bundle 'tpope/vim-markdown'
-    Bundle 'HubLot/vim-gromacs'
-    Bundle 'PotatoesMaster/i3-vim-syntax'
+        " sintaxes
+        Bundle 'tpope/vim-markdown'
+        Bundle 'HubLot/vim-gromacs'
+        Bundle 'PotatoesMaster/i3-vim-syntax'
 
-    " python
-    Bundle 'davidhalter/jedi-vim'
+        " python
+        Bundle 'davidhalter/jedi-vim'
 
-    " C/C++
-    Bundle 'Rip-Rip/clang_complete'
+        " C/C++
+        Bundle 'Rip-Rip/clang_complete'
 
-    " Octave
-    Bundle 'octave.vim'
+        " Octave
+        Bundle 'octave.vim'
 
-    " visual
-    Bundle 'vim-scripts/wombat256.vim'
-    
-    " etcétera
-    Bundle 'tomtom/tcomment_vim'
-    Bundle 'scrooloose/nerdtree'
-    Bundle 'fholgado/minibufexpl.vim'
-    Bundle 'ervandew/supertab'
-    " Bundle 'kien/ctrlp.vim'
+        " visual
+        Bundle 'vim-scripts/wombat256.vim'
+        
+        " etcétera
+        Bundle 'tomtom/tcomment_vim'
+        Bundle 'scrooloose/nerdtree'
+        Bundle 'fholgado/minibufexpl.vim'
+        Bundle 'ervandew/supertab'
+        " Bundle 'kien/ctrlp.vim'
 
-"
-" Geral
-"
-    " miscelânea
-    set nocompatible            " não retrocompatível com vi
-    filetype plugin indent on   " detecta tipo de arquivo automaticamente
-    set history=256             " histórico de comandos longo
-    set mouse=a                 " habilita mouse em todos os modos
-    set noerrorbells            " nada de zuada
+    "
+    " Geral
+    "
+        " miscelânea
+        set nocompatible            " não retrocompatível com vi
+        filetype plugin indent on   " detecta tipo de arquivo automaticamente
+        set history=256             " histórico de comandos longo
+        set mouse=a                 " habilita mouse em todos os modos
+        set noerrorbells            " nada de zuada
 
-    " desativa backup 
-    set nobackup
-    set nowritebackup
-    set noswapfile
-    
-    " busca
-    set hlsearch    " realça busca
-    set smartcase   " busca sensitiva a caixa quando possui letra maiúscula
+        " desativa backup 
+        set nobackup
+        set nowritebackup
+        set noswapfile
+        
+        " busca
+        set hlsearch    " realça busca
+        set smartcase   " busca sensitiva a caixa quando possui letra maiúscula
 
     " identação
     set tabstop=4
@@ -131,10 +131,4 @@
     map <c-k> <c-w>k
     map <c-l> <c-w>l
     map <c-h> <c-w>h
- 
-    " movimentação acelerada
-    noremap <M-l> 4l
-    noremap <M-h> 4h
-    noremap <M-j> 4j
-    noremap <M-k> 4k
 
