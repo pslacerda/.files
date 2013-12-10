@@ -11,8 +11,7 @@ pactl set-sink-volume 0 '20%' &
 xset -b &
 
 ## Layout do teclado
-setxkbmap br
-xmodmap $HOME/.xmodmap
+setxkbmap br -option ctrl:nocaps
 
 ## Economia de energia (standby -> suspendido -> desligado) (segundos)
 xset dpms 300 600 900 &
