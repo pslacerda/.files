@@ -11,15 +11,13 @@
         Bundle 'tpope/vim-markdown'
         Bundle 'HubLot/vim-gromacs'
         Bundle 'PotatoesMaster/i3-vim-syntax'
-
-        " python
+        
+        " linguagens
         Bundle 'davidhalter/jedi-vim'
-
-        " C/C++
         Bundle 'Rip-Rip/clang_complete'
-
-        " Octave
         Bundle 'octave.vim'
+        Bundle 'othree/html5.vim'
+
 
         " visual
         Bundle 'vim-scripts/wombat256.vim'
