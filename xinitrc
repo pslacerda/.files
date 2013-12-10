@@ -12,7 +12,7 @@ xset -b &
 
 ## Layout do teclado
 setxkbmap br
-xmodmap $HOME/.xmodmap
+xmodmap $HOME/.xmodmaprc
 
 ## Economia de energia (standby -> suspendido -> desligado) (segundos)
 xset dpms 300 600 900 &
