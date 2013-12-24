@@ -8,4 +8,4 @@
 [core]
 	whitespace = space-before-tab,trailing-space
 [push]
-	default = simple
+	default = upstream
