@@ -10,8 +10,9 @@
 #
 # Lançadores
 #
-    bindsym $mod+Return exec uxterm -e tmux attach
-    bindsym $mod+d      exec dmenu_run
+    bindsym $mod+Return        exec uxterm -e tmux attach
+    bindsym $mod+Shift+Return  exec chromium
+    bindsym $mod+d             exec dmenu_run
 
     # ajustar volume (keypad + - *)
     bindcode $mod+86 exec amixer --quiet set Master 1+
