@@ -14,10 +14,7 @@
         
         " linguagens
         Bundle 'davidhalter/jedi-vim'
-        Bundle 'Rip-Rip/clang_complete'
-        Bundle 'octave.vim'
-        Bundle 'othree/html5.vim'
-
+        Bundle 'AutomaticLaTeXPlugin'
 
         " visual
         Bundle 'vim-scripts/wombat256.vim'
@@ -63,6 +60,9 @@
     " autocompletar comandos
     set wildmenu
     set wildmode=longest,list,full
+    
+    " tex folding
+    let g:atp_folding=1
     
 "
 " Navegação

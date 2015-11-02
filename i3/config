@@ -14,10 +14,15 @@
     bindsym $mod+Shift+Return  exec chromium
     bindsym $mod+d             exec dmenu_run
 
-    # ajustar volume (keypad + - *)
-    bindcode $mod+86 exec amixer --quiet set Master 1+
-    bindcode $mod+82 exec amixer --quiet set Master 1-
-    bindcode $mod+63 exec amixer --quiet set Master toggle
+    # ajustar volume (F6, F7, F8)
+    bindcode 121 exec amixer --quiet set Master toggle
+    bindcode 122 exec amixer --quiet set Master 1%-
+    bindcode 123 exec amixer --quiet set Master 1%+
+
+    bindcode $mod+72 exec amixer --quiet set Master toggle
+    bindcode $mod+73 exec amixer --quiet set Master 1%-
+    bindcode $mod+74 exec amixer --quiet set Master 1%+
+
 
 #
 # Janelas flutuantes
