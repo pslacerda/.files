@@ -10,7 +10,7 @@
 #
 # Lançadores
 #
-    bindsym $mod+Return        exec urxvt -e tmux attach
+    bindsym $mod+Return        exec uxterm -e tmux attach
     bindsym $mod+Shift+Return  exec chromium
     bindsym $mod+d             exec dmenu_run
 

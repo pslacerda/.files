@@ -9,7 +9,7 @@ xTerm*scrollTtyOutput:  false
 xterm*customization: -color
 xterm*termName: xterm-256color
 xterm*faceName: DejaVu Sans Mono Book
-xterm*faceSize: 11
+xterm*faceSize: 12
 xterm*foreground: white
 xterm*background: black
 
