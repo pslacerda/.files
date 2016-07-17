@@ -1,23 +1,33 @@
-    "
-    " Geral
-    "
-        " miscelânea
-        filetype off
+"
+" Plugins
+"
+    set nocompatible
+    filetype off
 
-        set nocompatible            " não retrocompatível com vi
-        filetype plugin indent on   " detecta tipo de arquivo automaticamente
-        set history=1024            " histórico de comandos longo
-        set mouse=a                 " habilita mouse em todos os modos
-        set noerrorbells            " nada de zuada
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'tomtom/tcomment_vim'
 
-        " desativa backup 
-        set nobackup
-        set nowritebackup
-        set noswapfile
-        
-        " busca
-        set hlsearch    " realça busca
-        set smartcase   " busca sensitiva a caixa quando possui letra maiúscula
+
+"
+" Geral
+"
+    " miscelânea
+    filetype plugin indent on
+    set history=1024            " histórico de comandos longo
+    set mouse=a                 " habilita mouse em todos os modos
+    set noerrorbells            " nada de zuada
+
+    " desativa backup 
+    set nobackup
+    set nowritebackup
+    set noswapfile
+    
+    " busca
+    set hlsearch    " realça busca
+    set smartcase   " busca sensitiva a caixa quando possui letra maiúscula
 
     " identação
     set tabstop=4
@@ -65,6 +75,10 @@
 " Atalhos
 "
     imap jj <Esc>
+
+    " alterna comentários
+    imap <C-c> <Esc>:TComment<CR>
+    noremap <C-c> :TComment<CR>
 
     " salva arquivo com sudo 
     cmap w!! %!sudo tee > /dev/null % 
