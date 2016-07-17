@@ -1,38 +1,12 @@
     "
-    " Plugins Vundle
-    "
-        " prólogo
-        filetype off
-        set runtimepath+=~/.vim/bundle/vundle/
-        call vundle#rc()
-        Bundle 'gmarik/vundle'
-
-        " sintaxes
-        Bundle 'tpope/vim-markdown'
-        Bundle 'HubLot/vim-gromacs'
-        Bundle 'PotatoesMaster/i3-vim-syntax'
-        
-        " linguagens
-        Bundle 'davidhalter/jedi-vim'
-        Bundle 'AutomaticLaTeXPlugin'
-
-        " visual
-        Bundle 'vim-scripts/wombat256.vim'
-        
-        " etcétera
-        Bundle 'tomtom/tcomment_vim'
-        Bundle 'scrooloose/nerdtree'
-        Bundle 'fholgado/minibufexpl.vim'
-        Bundle 'ervandew/supertab'
-        " Bundle 'kien/ctrlp.vim'
-
-    "
     " Geral
     "
         " miscelânea
+        filetype off
+
         set nocompatible            " não retrocompatível com vi
         filetype plugin indent on   " detecta tipo de arquivo automaticamente
-        set history=256             " histórico de comandos longo
+        set history=1024            " histórico de comandos longo
         set mouse=a                 " habilita mouse em todos os modos
         set noerrorbells            " nada de zuada
 
@@ -61,30 +35,18 @@
     set wildmenu
     set wildmode=longest,list,full
     
-    " tex folding
-    let g:atp_folding=1
-    
-"
-" Navegação
-"
-    " " ctrlp
-    " let g:ctrlp_working_path_mode = 'ra' 
-    
-    " NERDTree
-    map <F2> :NERDTreeToggle<CR>
-    autocmd vimenter * if !argc() | NERDTree | endif
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "
 " Visual
 "
     " cores
     syntax enable
     set background=dark
-    colorscheme wombat256mod
+    colorscheme morning
 
     " exibição
-    set number        " enumera linhas
-    set laststatus=2  " sempre exibe barra de 'status'
+    set number         " enumera linhas
+    set relativenumber " números relativos a linha atual
+    set laststatus=2   " sempre exibe barra de 'status'
     
     " destaques
     set cursorline  " destaca linha atual
@@ -100,26 +62,9 @@
     set statusline+=%P                   " porcentagem do arquivo
 
 "
-" Autocompletar
-"
-    set completeopt=menu,menuone,longest  " usar menu etc
-    set pumheight=15                      " tamanho máximo do menu
-    
-    " Supertab - autocompletar consciente do contexto
-    let g:SuperTabDefaultCompletionType = "context"
-    
-    " clang_completion
-    let g:clang_complete_auto=0   " desabilita popup, usa <Tab> para autocompletar
-    let g:clang_complete_copen=1  " mostra erros do clang na janela de 'quickfix'
-
-"
 " Atalhos
 "
     imap jj <Esc>
-
-    " alterna comentários
-    imap <C-c> <Esc>:TComment<CR>
-    noremap <C-c> :TComment<CR>
 
     " salva arquivo com sudo 
     cmap w!! %!sudo tee > /dev/null % 

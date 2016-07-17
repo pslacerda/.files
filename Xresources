@@ -1,24 +1,17 @@
-
-*customization: -color
-xterm*termName: xterm-256color
-
-! Set font and size
-xterm*faceName: DejaVu Sans Mono Book
-xterm*faceSize: 11
-
-! double-click to select whole URLs :D
+! URLs are clickable
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-! DOS-box colours...
+! Stdout increase dont forces a scroll to the end
+xterm*ScrollBar: false
+xTerm*scrollTtyOutput:  false
+
+! Theme
+xterm*customization: -color
+xterm*termName: xterm-256color
+xterm*faceName: DejaVu Sans Mono Book
+xterm*faceSize: 11
 xterm*foreground: white
 xterm*background: black
-
-! right hand side scrollbar...
-xterm*ScrollBar: false
-XTerm*scrollTtyOutput:  false
-
-! stop output to terminal from jumping down to bottom of scroll again
-xterm*scrollTtyOutput: false
 
 ! Tango colors
 xterm*color0: rgb:2e2e/3434/3636

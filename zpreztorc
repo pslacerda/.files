@@ -1,8 +1,3 @@
-
-#
-# Módulos do Prezto
-#   (a ordem importa)
-#
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
@@ -18,7 +13,6 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'prompt' 
 
-
 #
 # Bê-a-bá
 # 
@@ -26,9 +20,9 @@ zstyle ':prezto:*:*' case-sensitive 'no'
 zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:editor' keymap 'vi'
 
-zstyle ':prezto:module:prompt' theme 'sorin'        # tema rasta com suporte keybinds vi
+zstyle ':prezto:module:prompt' theme 'sorin'
 zstyle ':prezto:module:terminal' auto-title 'no'    # sanidade ao nome das janelas no tmux 
 zstyle ':prezto:module:editor' dot-expansion 'yes'  # expande ... para ../.. 
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-#zstyle ':prezto:module:git:status:ignore' submodules 'all'
+zstyle ':prezto:module:git:status:ignore' submodules 'all'
