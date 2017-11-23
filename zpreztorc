@@ -13,12 +13,9 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'prompt' 
 
-#
-# Bê-a-bá
-# 
 zstyle ':prezto:*:*' case-sensitive 'no'
 zstyle ':prezto:*:*' color 'yes'
-zstyle ':prezto:module:editor' keymap 'vi'
+zstyle ':prezto:module:editor' key-bindings 'vi'
 
 zstyle ':prezto:module:prompt' theme 'sorin'
 zstyle ':prezto:module:terminal' auto-title 'no'    # sanidade ao nome das janelas no tmux 

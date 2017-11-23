@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-sudo apt-get -q install zsh git tmux i3-wm i3status dunst suckless-tools rxvt-unicode-256color fortune vim
+#sudo apt-get -q install zsh git tmux i3-wm i3status dunst suckless-tools rxvt-unicode-256color fortune vim
 
 # inicializa os submódulos prezto e vim/bundle/vundle
 git submodule update --init --recursive
