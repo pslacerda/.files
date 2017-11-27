@@ -42,3 +42,11 @@ alias -g G='| grep'
 alias -g L='|& less'
 alias -g C='| wc -l'
 
+source_docker_env_file() {
+    test -f "$1" || {
+        echo "No such file $1"
+        return
+    }
+    . <(sed -e '/^$/d' -e 's/=/=\"/g' -e 's/$/\"/g' $1)
+}
+
