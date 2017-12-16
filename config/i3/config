@@ -4,18 +4,30 @@
 #
     set $mod Mod4
     
+    font pango:montserrat bold 8
+
     bindsym $mod+Shift+R restart
     bindsym $mod+Shift+E exit
+    bindsym $mod+Shuft+L exec xflock4
 
-#
+    # class                 border  backgr. text    indicator child_border
+    client.focused          #3f515b #3f515b #ffffff #2e9ef4   #3f515b
+    client.focused_inactive #333333 #5f676a #f1f1f1 #484e50   #5f676a
+    client.unfocused        #333333 #222222 #f5f5f5 #292d2e   #222222
+    client.urgent           #2f343a #900000 #ffffff #900000   #900000
+    client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+    client.background       #ffffff
+
 # Lançadores
 #
-    bindsym $mod+Return        exec uxterm -e tmux attach
-    bindsym $mod+Shift+Return  exec chromium
-    bindsym $mod+d             exec dmenu_run
+    bindsym $mod+Return         exec uxterm -e tmux attach
+    bindsym $mod+Shift+Return   exec qupzilla
+    bindsym $mod+Control+Return exec thunar
+    bindsym $mod+d              exec xfce4-popup-whiskermenu
+    bindsym Print               exec xfce4-screenshooter
+    
 
-    set $vol 4%
-     
     # teclas multimedia
     bindcode $mod+72 exec amixer --quiet set Master toggle
     bindcode $mod+73 exec amixer --quiet set Master $vol-
@@ -25,6 +37,18 @@
     bindcode $mod+63 exec amixer --quiet set Master toggle
     bindcode $mod+82 exec amixer --quiet set Master $vol-
     bindcode $mod+86 exec amixer --quiet set Master $vol+
+
+
+# Suporte ao mouse
+    bindsym --release      button3      kill
+    bindsym --whole-window $mod+button3 kill
+
+    bindsym button2      floating toggle
+    bindsym $mod+button2 floating toggle
+
+    # The side buttons move the window around
+    bindsym button9 move left
+    bindsym button8 move right
 
 #
 # Janelas flutuantes
@@ -58,18 +82,20 @@
     bindsym $mod+Shift+l move right
 
     # redimensiona
-    bindsym $mod+Control+h resize shrink width 
-    bindsym $mod+Control+l resize grow width
-    bindsym $mod+Control+k resize grow height
-    bindsym $mod+Control+j resize shrink height
+    mode "resize" {
+        bindsym h resize shrink width 7px or 7 ppt
+        bindsym l resize grow width 7px or 7 ppt
+        bindsym k resize grow height 7px or 7 ppt
+        bindsym j resize shrink height 7px or 7 ppt
+
+        bindsym Escape mode "default"
+        bindsym Enter  mode "default"
+    }
+    bindsym $mod+r mode "resize"
 
 #
 # Containers
 #
-    # particiona container
-    #bindsym $mod+Minus  split horizontal
-    #bindsym $mod+Equals split vertical
-
     # alterna layout
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
@@ -95,11 +121,8 @@
     bindsym $mod+Shift+dollar     move container to workspace 4
 
 
-# Start i3bar to display a workspace bar (plus the system information i4status
-# finds out, if available)
-
 bar {
-        status_command      i3status -c ~/.i3status.conf
-        position            top
+        mode        invisible
+        tray_output none
 }
 

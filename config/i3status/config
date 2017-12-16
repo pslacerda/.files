@@ -7,6 +7,7 @@ general {
 order += "disk /"
 order += "disk /home"
 order += "cpu_usage"
+order += "battery 0"
 order += "volume master"
 order += "time"
 

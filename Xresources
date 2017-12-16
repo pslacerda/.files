@@ -1,6 +1,9 @@
 ! URLs are clickable
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
+! Enable tmux send copied text to the clipboard
+XTerm*disallowedWindowOps: 20,21,SetXprop
+
 ! Stdout increase dont forces a scroll to the end
 xterm*ScrollBar: false
 xTerm*scrollTtyOutput:  false
@@ -9,7 +12,7 @@ xTerm*scrollTtyOutput:  false
 xterm*customization: -color
 xterm*termName: xterm-256color
 xterm*faceName: DejaVu Sans Mono Book
-xterm*faceSize: 12
+xterm*faceSize: 11
 xterm*foreground: white
 xterm*background: black
 
@@ -38,3 +41,4 @@ xterm*textColor4: rgb:7272/9f9f/cfcf
 xterm*textColor5: rgb:adad/7f7f/a8a8
 xterm*textColor6: rgb:3434/e2e2/e2e2
 xterm*textColor7: rgb:eeee/eeee/ecec
+

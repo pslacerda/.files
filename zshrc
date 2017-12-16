@@ -30,7 +30,8 @@ globalias() {
         zle _expand_alias
         zle expand-word
     fi
-    zle self-insert }
+    zle self-insert
+}
 
 zle -N globalias
 bindkey " " globalias
@@ -41,6 +42,9 @@ bindkey -M isearch " " magic-space # normal space during searches
 alias -g G='| grep'
 alias -g L='|& less'
 alias -g C='| wc -l'
+
+# Normal aliases
+alias vim='nvim'
 
 source_docker_env_file() {
     test -f "$1" || {
