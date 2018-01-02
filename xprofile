@@ -10,3 +10,6 @@ xset -b &
 ## Layout do teclado
 setxkbmap br -option caps:swapescape
 
+## Habilita o debugger do qupzilla
+export QTWEBENGINE_REMOTE_DEBUGGING=12345
+

@@ -25,3 +25,5 @@ fi
 # instala plugins do neovim
 nvim -e -c PlugInstall -c q -c q
 
+# instala plugins do tmux
+"$PWD/tmux/plugins/tpm/scripts/install_plugins.sh"

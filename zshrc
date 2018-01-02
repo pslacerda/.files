@@ -1,5 +1,6 @@
 # Load Prezto
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+source $HOME/.fzf-key-bindings.zsh
 
 # Set the list of directories that Zsh searches for programs.
 path=(
@@ -10,8 +11,8 @@ path=(
 
 # some variables
 export BROWSER='chromium-browser'
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 # Type jj exits to command mode
