@@ -52,6 +52,8 @@ source_docker_env_file() {
         echo "No such file $1"
         return
     }
+    set -a
     . <(sed -e '/^$/d' -e 's/=/=\"/g' -e 's/$/\"/g' $1)
+    set +a
 }
 
