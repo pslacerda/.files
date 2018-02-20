@@ -6,6 +6,7 @@ source $HOME/.fzf-key-bindings.zsh
 path=(
   /usr/local/{bin,sbin}
   $HOME/bin
+  $HOME/go/bin
   $path
 )
 
@@ -46,6 +47,7 @@ alias -g C='| wc -l'
 
 # Normal aliases
 alias vim='nvim'
+alias ack='ack --color'
 
 source_docker_env_file() {
     test -f "$1" || {
