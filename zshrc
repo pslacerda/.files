@@ -11,7 +11,7 @@ path=(
 )
 
 # some variables
-export BROWSER='chromium-browser'
+export BROWSER='firefox'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
@@ -42,7 +42,7 @@ bindkey -M isearch " " magic-space # normal space during searches
 
 # Global aliases
 alias -g G='| grep'
-alias -g L='|& less'
+alias -g L='|& less -R'
 alias -g C='| wc -l'
 
 # Normal aliases
