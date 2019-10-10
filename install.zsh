@@ -1,7 +1,8 @@
 #!/bin/zsh
 
 # inicializa os submódulos prezto 
- git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+git submodule update --init --recursive
 
 # link config files to $HOME
 setopt EXTENDED_GLOB
