@@ -1,14 +1,18 @@
 
+# i3 config file (v4)
 #
 # Geral
 #
     set $mod Mod4
     
-    font pango:montserrat bold 8
+    font pango:montserrat bold R
 
-    bindsym $mod+Shift+R restart
-    bindsym $mod+Shift+E exit
-    bindsym $mod+Shuft+L exec xflock4
+    bindsym $mod+R restart
+    bindsym $mod+Shift+Q exec "loginctl lock-session"
+    bindsym --release Super_L exec krunner
+    
+    hide_edge_borders on
+    default_border normal 5
 
     # class                 border  backgr. text    indicator child_border
     client.focused          #3f515b #3f515b #ffffff #2e9ef4   #3f515b
@@ -19,32 +23,13 @@
 
     client.background       #ffffff
 
-# Lançadores
+
 #
-    bindsym $mod+Return         exec uxterm -e tmux attach
-    bindsym $mod+Shift+Return   exec qupzilla
-    bindsym $mod+Control+Return exec thunar
-    bindsym $mod+d              exec xfce4-popup-whiskermenu
-    bindsym Print               exec xfce4-screenshooter
-    
-
-    # teclas multimedia
-    bindcode $mod+72 exec amixer --quiet set Master toggle
-    bindcode $mod+73 exec amixer --quiet set Master $vol-
-    bindcode $mod+74 exec amixer --quiet set Master $vol+
-    
-    # keypad *, -, +
-    bindcode $mod+63 exec amixer --quiet set Master toggle
-    bindcode $mod+82 exec amixer --quiet set Master $vol-
-    bindcode $mod+86 exec amixer --quiet set Master $vol+
-
-
 # Suporte ao mouse
+#
     bindsym --release      button3      kill
     bindsym --whole-window $mod+button3 kill
-
     bindsym button2      floating toggle
-    bindsym $mod+button2 floating toggle
 
     # The side buttons move the window around
     bindsym button9 move left
@@ -66,8 +51,8 @@
 # Janelas empilhadas
 #
     # miscelânea
-    bindsym $mod+Shift+Q kill
-    bindsym $mod+f       fullscreen
+    bindsym $mod+q kill
+    bindsym $mod+f fullscreen
   
     # muda foco
     bindsym $mod+h focus left
@@ -81,17 +66,6 @@
     bindsym $mod+Shift+k move up
     bindsym $mod+Shift+l move right
 
-    # redimensiona
-    mode "resize" {
-        bindsym h resize shrink width 7px or 7 ppt
-        bindsym l resize grow width 7px or 7 ppt
-        bindsym k resize grow height 7px or 7 ppt
-        bindsym j resize shrink height 7px or 7 ppt
-
-        bindsym Escape mode "default"
-        bindsym Enter  mode "default"
-    }
-    bindsym $mod+r mode "resize"
 
 #
 # Containers
@@ -115,14 +89,24 @@
     bindsym $mod+4 workspace 4
 
     # move container em foco para área de trabalho
-    bindsym $mod+Shift+exclam     move container to workspace 1
-    bindsym $mod+Shift+at         move container to workspace 2
-    bindsym $mod+Shift+numbersign move container to workspace 3
-    bindsym $mod+Shift+dollar     move container to workspace 4
+    bindsym $mod+Shift+exclam     move container to workspace 1; workspace 1
+    bindsym $mod+Shift+at         move container to workspace 2; workspace 2
+    bindsym $mod+Shift+numbersign move container to workspace 3; workspace 3
+    bindsym $mod+Shift+dollar     move container to workspace 4; workspace 4
 
 
-bar {
-        mode        invisible
-        tray_output none
-}
-
+#
+# KDE support
+#
+no_focus [class=”plasmashell”]
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+##for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px, no_focus
