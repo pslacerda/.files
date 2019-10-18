@@ -1,0 +1,115 @@
+[Default Item Styles - Schema Breeze Dark]
+Error=ffda4453,ffda4453,0,,,1,-,-,,---
+
+[Default Item Styles - Schema Normal]
+Error=ffbf0303,ff9c0e0e,,0,,1,-,-,,---
+
+[Default Item Styles - Schema Solarized (dark)]
+Error=ffdc322f,ffdc322f,1,,,1,-,-,,---
+
+[Default Item Styles - Schema Vim (dark)]
+Error=ffffaa00,ffff5500,1,0,0,1,-,-,,---
+
+[Highlighting Zsh - Schema Breeze Dark]
+Alerts:Alert Level 1=28,ffe85848,ffe85848,1,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 2=28,ffca9219,ffca9219,1,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 3=28,ff81ca2d,ff81ca2d,1,,,,ff4d1f24,ff000000,,---
+Alerts:Normal Text=0,,,,,,,,,,---
+Alerts:Region Marker=25,ff2980b9,ff3daee9,,,,,ff153042,ff000000,,---
+Zsh:Backquote=1,,,1,,,,,,,---
+Zsh:Builtin=1,ff880088,ffcfcfc2,1,,,,,,,---
+Zsh:Command=1,ffcc00cc,ffcfcfc2,1,,,,,,,---
+Zsh:Comment=21,ff7a7c7d,ff808080,,,,,,,,---
+Zsh:Control=1,,,1,,,,,,,---
+Zsh:Error=30,ffda4453,ffda4453,,,,1,,,,---
+Zsh:Escape=16,ff2980b9,fffdbc4b,,,,,,,,---
+Zsh:Expression=29,ff27ae60,ff27ae60,,,,,,,,---
+Zsh:Function=2,ff8e44ad,ffaf81ff,,,,,,,,---
+Zsh:Keyword=1,,,1,,,,,,,---
+Zsh:Normal Text=0,,,,,,,,,,---
+Zsh:Option=0,,,,,,,,,,---
+Zsh:Path=0,,,,,,,,,,---
+Zsh:Redirection=1,ff223388,ffcfcfc2,1,,,,,,,---
+Zsh:String DoubleQ=12,fff44f4f,fff44f4f,,,,,,,,---
+Zsh:String Escape=16,ff2980b9,fffdbc4b,,,,,,,,---
+Zsh:String SingleQ=12,fff44f4f,fff44f4f,,,,,,,,---
+Zsh:String Transl.=12,fff44f4f,fff44f4f,,,,,,,,---
+Zsh:Variable=29,ff27ae60,ff27ae60,,,,,,,,---
+
+[Highlighting Zsh - Schema Normal]
+Alerts:Alert Level 1=28,ffe85848,ffe85848,1,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 2=28,ffca9219,ffca9219,1,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 3=28,ff81ca2d,ff81ca2d,1,,,,fff7e6e6,ff000000,,---
+Alerts:Normal Text=0,,,,,,,,,,---
+Alerts:Region Marker=25,ff0057ae,ff00316e,,,,,ffe0e9f8,ff000000,,---
+Zsh:Backquote=1,,,1,,,,,,,---
+Zsh:Builtin=1,ff880088,ffffffff,1,,,,,,,---
+Zsh:Command=1,ffcc00cc,ffffffff,1,,,,,,,---
+Zsh:Comment=21,ff898887,ff5e5d5d,,,,,,,,---
+Zsh:Control=1,,,1,,,,,,,---
+Zsh:Error=30,ffbf0303,ff9c0e0e,,,,1,,,,---
+Zsh:Escape=16,ff0057ae,ff00316e,,,,,,,,---
+Zsh:Expression=29,ff006e28,ff006e28,,,,,,,,---
+Zsh:Function=2,ff644a9b,ff452886,,,,,,,,---
+Zsh:Keyword=1,,,1,,,,,,,---
+Zsh:Normal Text=0,,,,,,,,,,---
+Zsh:Option=0,,,,,,,,,,---
+Zsh:Path=0,,,,,,,,,,---
+Zsh:Redirection=1,ff223388,ffffffff,1,,,,,,,---
+Zsh:String DoubleQ=12,ffbf0303,ff9c0e0e,,,,,,,,---
+Zsh:String Escape=16,ff0057ae,ff00316e,,,,,,,,---
+Zsh:String SingleQ=12,ffbf0303,ff9c0e0e,,,,,,,,---
+Zsh:String Transl.=12,ffbf0303,ff9c0e0e,,,,,,,,---
+Zsh:Variable=29,ff006e28,ff006e28,,,,,,,,---
+
+[Highlighting Zsh - Schema Solarized (dark)]
+Alerts:Alert Level 1=28,ffe85848,ffe85848,1,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 2=28,ffca9219,ffca9219,1,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 3=28,ff81ca2d,ff81ca2d,1,,,,,,,---
+Alerts:Normal Text=0,,,,,,,,,,---
+Alerts:Region Marker=25,ff268bd2,ff268bd2,,,,,ff073642,ff000000,,---
+Zsh:Backquote=1,ff859900,ff859900,1,,,,,,,---
+Zsh:Builtin=1,ff880088,ff859900,1,,,,,,,---
+Zsh:Command=1,ffcc00cc,ff859900,1,,,,,,,---
+Zsh:Comment=21,ff586e75,ff93a1a1,,1,,,,,,---
+Zsh:Control=1,ff859900,ff859900,1,,,,,,,---
+Zsh:Error=30,ffdc322f,ffdc322f,,,,1,,,,---
+Zsh:Escape=16,ffb58900,ffb58900,1,,,,,,,---
+Zsh:Expression=29,ff859900,ff859900,,,,,,,,---
+Zsh:Function=2,ff268bd2,ff268bd2,,,,,,,,---
+Zsh:Keyword=1,ff859900,ff859900,1,,,,,,,---
+Zsh:Normal Text=0,,,,,,,,,,---
+Zsh:Option=0,,,,,,,,,,---
+Zsh:Path=0,,,,,,,,,,---
+Zsh:Redirection=1,ff223388,ff859900,1,,,,,,,---
+Zsh:String DoubleQ=12,ff2aa198,ff2aa198,,,,,,,,---
+Zsh:String Escape=16,ffb58900,ffb58900,1,,,,,,,---
+Zsh:String SingleQ=12,ff2aa198,ff2aa198,,,,,,,,---
+Zsh:String Transl.=12,ff2aa198,ff2aa198,,,,,,,,---
+Zsh:Variable=29,ff859900,ff859900,,,,,,,,---
+
+[Highlighting Zsh - Schema Vim (dark)]
+Alerts:Alert Level 1=28,ffe85848,ffe85848,,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 2=28,ffca9219,ffca9219,,,,,ff451e1a,ff000000,,---
+Alerts:Alert Level 3=28,ff81ca2d,ff81ca2d,,,,,,,,---
+Alerts:Normal Text=0,,,,,,,,,,---
+Alerts:Region Marker=25,,,,,,,,,,---
+Zsh:Backquote=1,,,,,,,,,,---
+Zsh:Builtin=1,ff880088,ff000000,,,,,,,,---
+Zsh:Command=1,ffcc00cc,ff000000,,,,,,,,---
+Zsh:Comment=21,,,,,,,,,,---
+Zsh:Control=1,,,,,,,,,,---
+Zsh:Error=30,,,,,,,,,,---
+Zsh:Escape=16,,,,,,,,,,---
+Zsh:Expression=29,,,,,,,,,,---
+Zsh:Function=2,,,,,,,,,,---
+Zsh:Keyword=1,,,,,,,,,,---
+Zsh:Normal Text=0,,,,,,,,,,---
+Zsh:Option=0,,,,,,,,,,---
+Zsh:Path=0,,,,,,,,,,---
+Zsh:Redirection=1,ff223388,ff000000,,,,,,,,---
+Zsh:String DoubleQ=12,,,,,,,,,,---
+Zsh:String Escape=16,,,,,,,,,,---
+Zsh:String SingleQ=12,,,,,,,,,,---
+Zsh:String Transl.=12,,,,,,,,,,---
+Zsh:Variable=29,,,,,,,,,,---

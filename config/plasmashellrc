@@ -1,0 +1,11 @@
+[PlasmaRunnerManager]
+pluginWhiteList=services,places,desktopsessions,PowerDevil,shell,bookmarks,recentdocuments,locations,baloosearch
+
+[PlasmaViews][Panel 2][Horizontal1360]
+thickness=36
+
+[ScreenConnectors]
+0=HDMI-0
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc-1.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/00-start-here-2.js

@@ -1,0 +1,15 @@
+[$Version]
+update_info=fonts_kate.upd:Plasma_Fonts_Kate
+
+[Breeze Dark]
+dummy=prevent-empty-group
+
+[Normal]
+dummy=prevent-empty-group
+
+[Solarized (dark)]
+dummy=prevent-empty-group
+
+[Vim (dark)]
+Font=Monospace,11,-1,5,50,0,0,0,0,0
+dummy=prevent-empty-group
