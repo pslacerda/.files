@@ -1,7 +1,6 @@
 #!/bin/zsh
 set -x
 # init submódulos prezto 
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 git submodule update --init --recursive
 
 # link config files
@@ -10,12 +9,6 @@ for rcfile in "$PWD/"^install.zsh; do
     rm -rf "$HOME/.${rcfile:t}"
     ln -s "$rcfile" "$HOME/.${rcfile:t}"
 done
-
-# change default shell to ZSH
-curr_shell=$(basename $(getent passwd $LOGNAME | cut -d: -f7))
-if [ $curr_shell != zsh ]; then
-    chsh -s /bin/zsh
-fi
 
 # vim plugins
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \

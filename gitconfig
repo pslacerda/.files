@@ -8,5 +8,6 @@
 [core]
 	whitespace = space-before-tab,trailing-space
 	excludesfile = /home/pslacerda/.gitignore
+	symlinks = true
 [push]
 	default = upstream
